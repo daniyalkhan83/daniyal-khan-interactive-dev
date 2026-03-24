@@ -1,28 +1,34 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import proposalImg from "@/assets/proposal-perfect.png";
+import baigImg from "@/assets/baig-brothers.png";
+import giftoniansImg from "@/assets/giftonians-hub.png";
 
 const projects = [
   {
     title: "Proposal Perfect",
-    description: "AI-powered freelance proposal generator that helps craft winning proposals with intelligent suggestions and templates.",
+    description: "AI-powered freelance proposal generator that crafts personalized, high-converting proposals for Upwork, Fiverr, and LinkedIn in seconds.",
     tags: ["AI", "React", "TypeScript", "Tailwind CSS"],
     gradient: "from-blue-500/20 to-purple-500/20",
-    github: "https://github.com/daniyalkhan83/proposal-perfect",
+    link: "https://propelloai.netlify.app/",
+    image: proposalImg,
   },
   {
     title: "Baig Brothers",
-    description: "A full-featured rice e-commerce website with product listings, cart functionality, and a modern shopping experience.",
+    description: "Premium rice e-commerce website showcasing product varieties, company history, gallery, and contact — trusted across continents since 1985.",
     tags: ["React", "E-Commerce", "Tailwind CSS", "Node.js"],
     gradient: "from-purple-500/20 to-pink-500/20",
-    github: "https://github.com/daniyalkhan83/baigbrothers",
+    link: "https://baigbrothers.netlify.app/",
+    image: baigImg,
   },
   {
-    title: "Giftonians",
-    description: "Giftonians Hub AI Directory — a smart directory platform for discovering and exploring AI-powered tools and resources.",
+    title: "Giftonians Hub",
+    description: "AI tools directory platform to discover, compare, and explore 500+ curated AI tools across writing, coding, image generation, and more.",
     tags: ["AI", "Directory", "React", "TypeScript"],
     gradient: "from-cyan-500/20 to-blue-500/20",
-    github: "https://github.com/daniyalkhan83/giftonians",
+    link: "https://giftonianshub.netlify.app/",
+    image: giftoniansImg,
   },
 ];
 
@@ -49,7 +55,7 @@ const ProjectsSection = () => {
           {projects.map((project, i) => (
             <motion.a
               key={project.title}
-              href={project.github}
+              href={project.link}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 40 }}
@@ -58,12 +64,14 @@ const ProjectsSection = () => {
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
               className="glass-card rounded-2xl overflow-hidden group cursor-pointer block"
             >
-              {/* Preview area */}
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
-                <div className="font-mono text-sm text-muted-foreground opacity-40 group-hover:opacity-70 transition-opacity">
-                  {'{ preview }'}
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
+              {/* Preview image */}
+              <div className="h-48 relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
               </div>
 
               <div className="p-6">
@@ -85,10 +93,7 @@ const ProjectsSection = () => {
                 </div>
                 <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="text-sm text-primary flex items-center gap-1 hover:underline">
-                    <Github className="w-4 h-4" /> View on GitHub
-                  </span>
-                  <span className="text-sm text-primary flex items-center gap-1">
-                    <ExternalLink className="w-4 h-4" /> Open
+                    <ExternalLink className="w-4 h-4" /> Visit Live Site
                   </span>
                 </div>
               </div>
