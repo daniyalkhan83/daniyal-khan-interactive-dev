@@ -47,13 +47,16 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
-            <motion.div
+            <motion.a
               key={project.title}
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="glass-card rounded-2xl overflow-hidden group cursor-pointer"
+              className="glass-card rounded-2xl overflow-hidden group cursor-pointer block"
             >
               {/* Preview area */}
               <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
@@ -82,14 +85,14 @@ const ProjectsSection = () => {
                 </div>
                 <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="text-sm text-primary flex items-center gap-1 hover:underline">
-                    <Github className="w-4 h-4" /> Code
+                    <Github className="w-4 h-4" /> View on GitHub
                   </span>
-                  <span className="text-sm text-primary flex items-center gap-1 hover:underline">
-                    <ExternalLink className="w-4 h-4" /> Live Demo
+                  <span className="text-sm text-primary flex items-center gap-1">
+                    <ExternalLink className="w-4 h-4" /> Open
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
