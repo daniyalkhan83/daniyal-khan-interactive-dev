@@ -11,7 +11,7 @@ const projects = [
     description: "AI-powered freelance proposal generator that crafts personalized, high-converting proposals for Upwork, Fiverr, and LinkedIn in seconds.",
     tags: ["AI", "React", "TypeScript", "Tailwind CSS"],
     gradient: "from-blue-500/20 to-purple-500/20",
-    link: "https://propelloai.netlify.app/",
+    link: "https://proposal-perfect-two.vercel.app/",
     image: proposalImg,
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     description: "Premium rice e-commerce website showcasing product varieties, company history, gallery, and contact — trusted across continents since 1985.",
     tags: ["React", "E-Commerce", "Tailwind CSS", "Node.js"],
     gradient: "from-purple-500/20 to-pink-500/20",
-    link: "https://baigbrothers.netlify.app/",
+    link: "https://baigbrothers.vercel.app/",
     image: baigImg,
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     description: "AI tools directory platform to discover, compare, and explore 500+ curated AI tools across writing, coding, image generation, and more.",
     tags: ["AI", "Directory", "React", "TypeScript"],
     gradient: "from-cyan-500/20 to-blue-500/20",
-    link: "https://giftonianshub.netlify.app/",
+    link: "https://giftonianshub.vercel.app/",
     image: giftoniansImg,
   },
 ];
