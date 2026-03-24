@@ -4,28 +4,25 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    description: "A full-featured admin dashboard with real-time analytics, order management, and product inventory system.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js"],
+    title: "Proposal Perfect",
+    description: "AI-powered freelance proposal generator that helps craft winning proposals with intelligent suggestions and templates.",
+    tags: ["AI", "React", "TypeScript", "Tailwind CSS"],
     gradient: "from-blue-500/20 to-purple-500/20",
+    github: "https://github.com/daniyalkhan83/proposal-perfect",
   },
   {
-    title: "Task Management App",
-    description: "Kanban-style project management tool with drag-and-drop, team collaboration, and deadline tracking.",
-    tags: ["React", "MongoDB", "Express.js", "Socket.io"],
+    title: "Baig Brothers",
+    description: "A full-featured rice e-commerce website with product listings, cart functionality, and a modern shopping experience.",
+    tags: ["React", "E-Commerce", "Tailwind CSS", "Node.js"],
     gradient: "from-purple-500/20 to-pink-500/20",
+    github: "https://github.com/daniyalkhan83/baigbrothers",
   },
   {
-    title: "Weather Forecast App",
-    description: "Beautiful weather application with location-based forecasts, interactive maps, and 7-day predictions.",
-    tags: ["React", "TypeScript", "API Integration", "CSS3"],
+    title: "Giftonians",
+    description: "Giftonians Hub AI Directory — a smart directory platform for discovering and exploring AI-powered tools and resources.",
+    tags: ["AI", "Directory", "React", "TypeScript"],
     gradient: "from-cyan-500/20 to-blue-500/20",
-  },
-  {
-    title: "Portfolio Website",
-    description: "This interactive portfolio with animated avatar, particle effects, and smooth transitions throughout.",
-    tags: ["React", "Framer Motion", "Tailwind CSS", "TypeScript"],
-    gradient: "from-green-500/20 to-cyan-500/20",
+    github: "https://github.com/daniyalkhan83/giftonians",
   },
 ];
 
