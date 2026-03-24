@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const AnimatedAvatar = ({ className = "" }: { className?: string }) => {
@@ -7,8 +7,10 @@ const AnimatedAvatar = ({ className = "" }: { className?: string }) => {
   const [scrollY, setScrollY] = useState(0);
 
   const springConfig = { stiffness: 100, damping: 20 };
-  const eyeX = useSpring(useTransform(mouseX, [0, window.innerWidth], [-3, 3]), springConfig);
-  const eyeY = useSpring(useTransform(mouseY, [0, window.innerHeight], [-2, 2]), springConfig);
+  const rawEyeX = useTransform(mouseX, [0, typeof window !== 'undefined' ? window.innerWidth : 1920], [-3, 3]);
+  const rawEyeY = useTransform(mouseY, [0, typeof window !== 'undefined' ? window.innerHeight : 1080], [-2, 2]);
+  const eyeX = useSpring(rawEyeX, springConfig);
+  const eyeY = useSpring(rawEyeY, springConfig);
 
   useEffect(() => {
     const handleMouse = (e: MouseEvent) => {
