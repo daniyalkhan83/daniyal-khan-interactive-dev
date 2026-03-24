@@ -75,8 +75,8 @@ const AnimatedAvatar = ({ className = "" }: { className?: string }) => {
           <g>
             <ellipse cx="82" cy="118" rx="7" ry="8" fill="hsl(0, 0%, 100%)" />
             <ellipse cx="118" cy="118" rx="7" ry="8" fill="hsl(0, 0%, 100%)" />
-            <motion.circle cx="82" cy="118" r="3.5" fill="hsl(225, 25%, 12%)" style={{ cx: useTransform(eyeX, v => 82 + v), cy: useTransform(eyeY, v => 118 + v) }} />
-            <motion.circle cx="118" cy="118" r="3.5" fill="hsl(225, 25%, 12%)" style={{ cx: useTransform(eyeX, v => 118 + v), cy: useTransform(eyeY, v => 118 + v) }} />
+            <motion.circle cx="82" cy="118" r="3.5" fill="hsl(225, 25%, 12%)" style={{ x: eyeX, y: eyeY } as any} />
+            <motion.circle cx="118" cy="118" r="3.5" fill="hsl(225, 25%, 12%)" style={{ x: eyeX, y: eyeY } as any} />
             {/* Eye shine */}
             <circle cx="84" cy="116" r="1.5" fill="hsl(0, 0%, 100%)" opacity="0.8" />
             <circle cx="120" cy="116" r="1.5" fill="hsl(0, 0%, 100%)" opacity="0.8" />
