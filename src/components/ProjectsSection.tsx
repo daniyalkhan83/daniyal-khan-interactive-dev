@@ -4,28 +4,25 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    description: "A full-featured admin dashboard with real-time analytics, order management, and product inventory system.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js"],
+    title: "Proposal Perfect",
+    description: "AI-powered freelance proposal generator that helps craft winning proposals with intelligent suggestions and templates.",
+    tags: ["AI", "React", "TypeScript", "Tailwind CSS"],
     gradient: "from-blue-500/20 to-purple-500/20",
+    github: "https://github.com/daniyalkhan83/proposal-perfect",
   },
   {
-    title: "Task Management App",
-    description: "Kanban-style project management tool with drag-and-drop, team collaboration, and deadline tracking.",
-    tags: ["React", "MongoDB", "Express.js", "Socket.io"],
+    title: "Baig Brothers",
+    description: "A full-featured rice e-commerce website with product listings, cart functionality, and a modern shopping experience.",
+    tags: ["React", "E-Commerce", "Tailwind CSS", "Node.js"],
     gradient: "from-purple-500/20 to-pink-500/20",
+    github: "https://github.com/daniyalkhan83/baigbrothers",
   },
   {
-    title: "Weather Forecast App",
-    description: "Beautiful weather application with location-based forecasts, interactive maps, and 7-day predictions.",
-    tags: ["React", "TypeScript", "API Integration", "CSS3"],
+    title: "Giftonians",
+    description: "Giftonians Hub AI Directory — a smart directory platform for discovering and exploring AI-powered tools and resources.",
+    tags: ["AI", "Directory", "React", "TypeScript"],
     gradient: "from-cyan-500/20 to-blue-500/20",
-  },
-  {
-    title: "Portfolio Website",
-    description: "This interactive portfolio with animated avatar, particle effects, and smooth transitions throughout.",
-    tags: ["React", "Framer Motion", "Tailwind CSS", "TypeScript"],
-    gradient: "from-green-500/20 to-cyan-500/20",
+    github: "https://github.com/daniyalkhan83/giftonians",
   },
 ];
 
@@ -50,13 +47,16 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
-            <motion.div
+            <motion.a
               key={project.title}
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="glass-card rounded-2xl overflow-hidden group cursor-pointer"
+              className="glass-card rounded-2xl overflow-hidden group cursor-pointer block"
             >
               {/* Preview area */}
               <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
@@ -85,14 +85,14 @@ const ProjectsSection = () => {
                 </div>
                 <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="text-sm text-primary flex items-center gap-1 hover:underline">
-                    <Github className="w-4 h-4" /> Code
+                    <Github className="w-4 h-4" /> View on GitHub
                   </span>
-                  <span className="text-sm text-primary flex items-center gap-1 hover:underline">
-                    <ExternalLink className="w-4 h-4" /> Live Demo
+                  <span className="text-sm text-primary flex items-center gap-1">
+                    <ExternalLink className="w-4 h-4" /> Open
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
