@@ -4,8 +4,7 @@ import { ExternalLink } from "lucide-react";
 import proposalImg from "@/assets/proposal-perfect.png";
 import baigImg from "@/assets/baig-brothers.png";
 import giftoniansImg from "@/assets/giftonians-hub.png";
-import learnsphereImg from "@/assets/learnsphere-ai.png"; // <-- new project image
-
+import learnsphereImg from "@/assets/learnsphereImg.PNG"; 
 const projects = [
   {
     title: "Proposal Perfect",
